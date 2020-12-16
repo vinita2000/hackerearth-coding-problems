@@ -6,8 +6,12 @@ for t in range(int(input())):
     n = int(n)
     k = int(k)
 
+    k_mod = k % n
+    
     arr = arr[::-1]
+    #reverse list after k_mod
     arr[k_mod:n] = arr[k_mod:n][::-1]
+    #reverse list till k_mod
     arr[:k_mod] = arr[:k_mod][::-1]
     
     for item in arr:
